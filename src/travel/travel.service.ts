@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
 export class TravelService {
@@ -9,5 +9,15 @@ export class TravelService {
 
   findAll() {
     return this.trips;
+  }
+
+  findOne(id: number) {
+    const trip = this.trips.find((trip) => trip.id === id);
+
+    if (!trip) {
+      throw new NotFoundException(`Trip with ID ${id} not found`);
+    }
+
+    return trip;
   }
 }

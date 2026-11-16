@@ -16,6 +16,13 @@ let TravelService = class TravelService {
     findAll() {
         return this.trips;
     }
+    findOne(id) {
+        const trip = this.trips.find((trip) => trip.id === id);
+        if (!trip) {
+            throw new common_1.NotFoundException(`Trip with ID ${id} not found`);
+        }
+        return trip;
+    }
 };
 exports.TravelService = TravelService;
 exports.TravelService = TravelService = __decorate([

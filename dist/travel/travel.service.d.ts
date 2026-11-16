@@ -5,4 +5,9 @@ export declare class TravelService {
         name: string;
         price: number;
     }[];
+    findOne(id: number): {
+        id: number;
+        name: string;
+        price: number;
+    };
 }
