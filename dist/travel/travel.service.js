@@ -9,6 +9,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TravelService = void 0;
 const common_1 = require("@nestjs/common");
 let TravelService = class TravelService {
+    trips = [
+        { id: 1, name: 'To China', price: 9000 },
+        { id: 2, name: 'To Morocco', price: 4000 },
+    ];
 };
 exports.TravelService = TravelService;
 exports.TravelService = TravelService = __decorate([
