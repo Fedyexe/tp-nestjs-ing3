@@ -13,6 +13,9 @@ let TravelService = class TravelService {
         { id: 1, name: 'To China', price: 9000 },
         { id: 2, name: 'To Morocco', price: 4000 },
     ];
+    findAll() {
+        return this.trips;
+    }
 };
 exports.TravelService = TravelService;
 exports.TravelService = TravelService = __decorate([

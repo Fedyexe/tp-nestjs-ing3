@@ -18,6 +18,13 @@ describe('TravelController', () => {
     expect(controller).toBeDefined();
   });
 
+  it('should return all trips', () => {
+    expect(controller.findAll()).toEqual([
+      { id: 1, name: 'To China', price: 9000 },
+      { id: 2, name: 'To Morocco', price: 4000 },
+    ]);
+  });
+
   it('should return the new travel prompt', () => {
     expect(controller.createTravel()).toBe(
       '<Planifier un nouveau voyage ici>',
